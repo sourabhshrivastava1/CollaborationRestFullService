@@ -1,4 +1,7 @@
 com\niit\collaboration\rest\services\BlogController.class
+com\niit\collaboration\rest\services\EventController.class
 com\niit\collaboration\rest\services\FriendController.class
 com\niit\collaboration\rest\services\ChatController.class
+com\niit\collaboration\rest\services\FileUploadController.class
 com\niit\collaboration\rest\services\UserController.class
+com\niit\collaboration\rest\services\JobController.class
