@@ -53,7 +53,7 @@ public class JobController {
 	public ResponseEntity<JobApplication> applyJob(@RequestBody JobApplication jobApplication) {
 		user = (User) session.getAttribute("user");
 		//jobApplication.setJob_id("jmn00");
-		jobApplication.setUserID(user.getId());
+		jobApplication.setUser_id(user.getId());
 		jobApplication.setStatus('A');
 		
 		Long d = System.currentTimeMillis();
@@ -80,10 +80,10 @@ public class JobController {
 		return new ResponseEntity<List<JobApplication>>(jobAppledList, HttpStatus.OK);
 	}
 
-	@GetMapping("job-applied/{userID}")
-	public ResponseEntity<List<JobApplication>> getUserAppliedJob(@PathVariable("userID") String userID) {
+	@GetMapping("job-applied/{user_id}")
+	public ResponseEntity<List<JobApplication>> getUserAppliedJob(@PathVariable("user_id") String user_id) {
 
-		List<JobApplication> userAppliedJobs = jobApplicationDAO.getList(userID);
+		List<JobApplication> userAppliedJobs = jobApplicationDAO.getList(user_id);
 		return new ResponseEntity<List<JobApplication>>(userAppliedJobs, HttpStatus.OK);
 	}
 

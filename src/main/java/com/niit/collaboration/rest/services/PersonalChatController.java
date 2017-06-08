@@ -40,8 +40,8 @@ public class PersonalChatController {
 	@GetMapping("chat/{friend_id}")
 	public ResponseEntity<List<Chat>> getAllchat(@PathVariable("friend_id") String friend_id) {
 		user = (User) session.getAttribute("user");
-		String user_id = user.getId();
-		List<Chat> chatList = chatDAO.getChatByFriend(user_id, friend_id);
+		String userID = user.getId();
+		List<Chat> chatList = chatDAO.getChatByFriend(userID, friend_id);
 
 		return new ResponseEntity<List<Chat>>(chatList, HttpStatus.OK);
 	}

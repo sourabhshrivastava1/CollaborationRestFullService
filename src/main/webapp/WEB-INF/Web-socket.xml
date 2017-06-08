@@ -1,4 +1,4 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
+<!-- <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:websocket="http://www.springframework.org/schema/websocket"
     xsi:schemaLocation="
@@ -14,4 +14,4 @@
         <websocket:simple-broker prefix="/topic, /queue"/>
     </websocket:message-broker>
 
-</beans>
+</beans> -->
